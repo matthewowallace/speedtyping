@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&family=Ubuntu:wght@500&display=swap');
+body,html{
+  margin:0;
+}
+
+body{
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  //display:none;
+}
+
+header{
+  position: absolute;
+  padding: 1em;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 2em);
+  background: #fff;
+
+  a{
+    text-decoration: none;
+    color: #ff6e40;;
+  }
+
+  a.logo{
+    font-size:1.2em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+  }
+  nav ul{
+    list-style-type:none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  li a{
+    padding: 1em;
+  }
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns: auto;
+
+  section{
+    padding: 3em;
+
+    h1{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2em;
+    }
+
+    h1, h2 .read-btn{
+      text-transform: uppercase;
+      margin: 0;
+    }
+    h2{
+      font-size: 1.4rem;
+    }
+    
+    
+    a{
+      text-decoration: none;
+      color: #ff6e40;
+      font-size: 16px;
+      padding: 13px;
+      border: none;
+      background-color: #fff;
+      box-shadow:  -4px -3px 8px rgb(238, 238, 238), 
+                    4px  3px 8px #00000027;
+     
+    }
+
+    span{
+      padding: 8px;
+      background-color: #ff6e40;
+      border: 1px solid #ff6e40;
+      box-shadow:  4px 4px 1px rgb(230, 229, 229), 
+                   -4px -4px 1px #00000027;
+                   display: inline;
+    }
+    
+    
+
+    img{
+      width: auto;
+      height: 28px;
+      margin-right: 10px;
+    }
+
+  }
+
+  section.hero{
+    padding-top: 8em;
+    background: url('../assets/typing.gif');
+    background-size: cover;
+
+    p{
+      width: 70%;
+      font-size: 0.8rem;
+      margin-bottom: 40px;
+    }
+
+  }
+
+  section.sidebar, section.subscription{
+    font-size: .9em;
+    line-height: 1.6em;
+  }
+
+  section.sidebar{
+    background: #f2f2f2;
+  }
+
+  section.subscription{
+    button{
+      width: 100%;
+      background: #fafafa;
+      color:#fff;
+      padding: 1em;
+      border: none;
+      font-family: 'Arial',sans-serif;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+      html{
+        font-size: 18px;
+      }
+}
+
+
+@media only screen and (min-width: 1020px){
+    header{
+      background: none;
+    }
+
+    .wrapper{
+      grid-template-columns: 70% auto;
+      grid-template-rows: 60% auto;
+      grid-template-areas:
+        "hero feature"
+        "hero subscribe";
+      height: 100vh;
+    }
+    section.hero{
+      grid-area:hero;
+    }
+}
+
+@media only screen and (min-width: 1800px){
+  html{
+    font-size: 21px;
+  }
+
+}
